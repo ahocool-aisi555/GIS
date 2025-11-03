@@ -55,7 +55,7 @@
             if (!startPointMarker) {
                 // First click: Set the start point
                 startPointMarker = L.marker(latLng, { draggable: true, icon: startIcon }).addTo(map);
-                startPointMarker.bindPopup('Start Point').openPopup();
+                startPointMarker.bindPopup('Titik Awal').openPopup();
                 startPointMarker.on('dragend', updateRoute); // Update route when marker is dragged
                 document.getElementById('route-info').innerHTML = `Start Point: ${latLng.lat.toFixed(5)}, ${latLng.lng.toFixed(5)}`;
             } else if (!endPointMarker) {
@@ -71,7 +71,7 @@
                 // Reset if both points are already set
                 resetMarkers();
                 startPointMarker = L.marker(latLng, { draggable: true, icon: startIcon }).addTo(map);
-                startPointMarker.bindPopup('Titik Mulai').openPopup();
+                startPointMarker.bindPopup('Titik Awal').openPopup();
                 startPointMarker.on('dragend', updateRoute);
                 document.getElementById('route-info').innerHTML = `Start Point: ${latLng.lat.toFixed(5)}, ${latLng.lng.toFixed(5)}`;
             }
