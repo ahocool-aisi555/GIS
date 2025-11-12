@@ -50,8 +50,8 @@
 		rejectUnauthorized: true // Optional: Set to false if using self-signed certificates (not recommended for production)
 });
         client.on('connect', () => {
-            console.log('Connected to MQTT broker');
-            client.subscribe('car/gps', (err) => {
+            console.log('Connected to MQTT broker'); 
+            client.subscribe('car/gps', (err) => { //<<<<<<<<UBAH TOPIK INI 
                 if (!err) {
                     console.log('Subscribed to car/gps topic');
                 }
